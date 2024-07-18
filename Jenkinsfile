@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+	echo "Hello KumAR"
     environment {
         TOMCAT_WEBAPPS_DIR = "D:\\Softwares\\Tomcat\\apache-tomcat-9.0.62\\webapps"
         FOOD_DIR = "D:\\Softwares\\Tomcat\\apache-tomcat-9.0.62\\webapps\\food"
@@ -12,7 +12,7 @@ pipeline {
         stage('Check Directory and Update') {
             steps {
                 script {
-					echo "Hello Rakesh"
+					
                     def foodDir = new File(env.FOOD_DIR)
                     if (foodDir.exists()) {
                         echo "The Directory is Found at ${env.TOMCAT_WEBAPPS_DIR}"
