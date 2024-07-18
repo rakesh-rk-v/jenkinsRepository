@@ -12,7 +12,7 @@ pipeline {
         stage('Check Directory and Update') {
             steps {
                 script {
-					echo "Hello World"
+					echo "Hello Rakesh"
                     def foodDir = new File(env.FOOD_DIR)
                     if (foodDir.exists()) {
                         echo "The Directory is Found at ${env.TOMCAT_WEBAPPS_DIR}"
